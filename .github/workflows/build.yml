@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Unzip project
-        run: unzip zomg-ultimate.zip -d .
+        run: unzip zomg-ultimate.zip -d . && mv zomg-ultimate/* . && rmdir zomg-ultimate
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
