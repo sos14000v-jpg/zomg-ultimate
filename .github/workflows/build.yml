@@ -13,8 +13,8 @@ jobs:
       - name: Unzip project
             run: |
     unzip -o zomg-ultimate.zip -d .
+    shopt -s dotglob
     mv zomg-ultimate/* .
-    mv zomg-ultimate/.* . || true
     rm -rf zomg-ultimate
 
       - name: Set up Java 17
